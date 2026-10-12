@@ -1,6 +1,4 @@
-
-const API_URL = "http://localhost:8080/api/students";
-
+const API_URL = "https://student-management-backend-ax8i.onrender.com/api/students";
 // Get HTML elements
 const studentForm = document.getElementById("studentForm");
 const studentTableBody = document.getElementById("studentTableBody");
