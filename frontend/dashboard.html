@@ -1,0 +1,241 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Student Management Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <div>
+                <h2>StudentHub</h2>
+                <p>Management Portal</p>
+            </div>
+        </div>
+
+        <p class="nav-heading">MAIN MENU</p>
+
+        <nav class="navigation">
+            <a href="dashboard.html" class="nav-link active">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="students.html" class="nav-link">
+                <span>♙</span> Student Records
+            </a>
+
+            <a href="login.html" class="nav-link">
+                <span>↪</span> Logout
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Student Management</p>
+            <small>Academic Portal</small>
+        </div>
+
+    </aside>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard-main">
+
+        <!-- Top Header -->
+        <header class="dashboard-topbar">
+
+            <div>
+                <p class="eyebrow">OVERVIEW</p>
+                <h1>Dashboard</h1>
+                <p class="subtitle">
+                    Welcome to your student management workspace.
+                </p>
+            </div>
+
+            <a class="profile-chip" href="login.html">
+                <span class="avatar">A</span>
+                <span>
+                    <strong>Administrator</strong>
+                    <small>Portal access</small>
+                </span>
+            </a>
+
+        </header>
+
+        <!-- Statistics Cards -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="stat-icon blue-icon">♙</div>
+                <p>Total Students</p>
+                <h2 id="totalStudents">0</h2>
+                <small>Registered student records</small>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon purple-icon">▤</div>
+                <p>Departments</p>
+                <h2 id="departmentCount">0</h2>
+                <small>Departments represented</small>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon green-icon">✓</div>
+                <p>Academic Years</p>
+                <h2 id="yearCount">0</h2>
+                <small>Years represented by students</small>
+            </article>
+
+        </section>
+
+        <!-- Add Student Section -->
+        <section class="dashboard-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <h2>Student Management</h2>
+                    <p>Add students and manage your existing records.</p>
+                </div>
+
+                <button
+                    type="button"
+                    id="refreshButton"
+                    class="secondary-button">
+                    Refresh Records
+                </button>
+            </div>
+
+            <form id="studentForm" class="student-form">
+
+                <div class="form-field">
+                    <label for="rollNumber">Roll Number</label>
+                    <input
+                        type="text"
+                        id="rollNumber"
+                        placeholder="e.g. STU002"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter student name"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="student@example.com"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="department">Department</label>
+                    <input
+                        type="text"
+                        id="department"
+                        placeholder="e.g. AIML"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="yearOfStudy">Year of Study</label>
+
+                    <select id="yearOfStudy" required>
+                        <option value="">Select year</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="primary-button">
+                    + Add Student
+                </button>
+
+                <p id="message" role="status"></p>
+
+            </form>
+
+        </section>
+
+        <!-- Student Records Section -->
+        <section class="dashboard-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <h2>Student Records</h2>
+                    <p>Search, view, and delete registered students.</p>
+                </div>
+
+                <span class="records-label">Live Records</span>
+            </div>
+
+            <!-- NEW SEARCH BAR -->
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="studentSearch"
+                    placeholder="Search by name, roll number, email, or department..."
+                    aria-label="Search student records">
+
+                <button
+                    type="button"
+                    id="clearSearch"
+                    class="secondary-button">
+                    Clear
+                </button>
+
+            </div>
+
+            <!-- Student Table -->
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Roll Number</th>
+                            <th>Student Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Year</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTableBody">
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            Student Management Portal &copy; 2026
+        </footer>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
+```

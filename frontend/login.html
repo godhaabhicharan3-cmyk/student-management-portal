@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Student Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Student Management Portal</h1>
+        <p>Please log in to continue</p>
+    </header>
+
+    <main class="container">
+        <section class="card" style="max-width: 450px; margin: 40px auto;">
+            <h2>Login</h2>
+
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">Login</button>
+                <p id="loginMessage"></p>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value;
+            const loginMessage = document.getElementById("loginMessage");
+
+            if (username === "admin" && password === "admin123") {
+                loginMessage.style.color = "#15803d";
+                loginMessage.textContent = "Login successful! Opening student portal...";
+
+                setTimeout(() => {
+                    window.location.href = "students.html";
+                }, 1000);
+            } else {
+                loginMessage.style.color = "#dc2626";
+                loginMessage.textContent = "Invalid username or password.";
+            }
+        });
+    </script>
+
+</body>
+</html>

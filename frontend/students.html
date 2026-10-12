@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Student Management Portal</h1>
+        <p>Manage your student records easily</p>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Add New Student</h2>
+
+            <form id="studentForm">
+
+                <label for="rollNumber">Roll Number</label>
+                <input type="text" id="rollNumber"
+                       placeholder="Enter roll number" required>
+
+                <label for="name">Student Name</label>
+                <input type="text" id="name"
+                       placeholder="Enter student name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email"
+                       placeholder="Enter email address" required>
+
+                <label for="department">Department</label>
+                <input type="text" id="department"
+                       placeholder="Example: AIML" required>
+
+                <label for="yearOfStudy">Year of Study</label>
+                <select id="yearOfStudy" required>
+                    <option value="">Select year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+
+                <button type="submit">Add Student</button>
+
+                <p id="message"></p>
+
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Student Records</h2>
+
+            <button type="button" id="refreshButton">
+                Refresh Students
+            </button>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Roll Number</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Year</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTableBody">
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
