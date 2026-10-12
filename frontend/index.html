@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        nav {
+            background: #123b70;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 90px 20px;
+            background: linear-gradient(135deg, #123b70, #2563eb);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 5vw, 48px);
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            margin: 8px;
+            border-radius: 7px;
+            background: white;
+            color: #123b70;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .features {
+            max-width: 1000px;
+            margin: 45px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .feature {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px #00000010;
+            text-align: center;
+        }
+
+        .feature h3 {
+            color: #123b70;
+        }
+
+        footer {
+            text-align: center;
+            background: #123b70;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2>Student Portal</h2>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Student Management Portal</h1>
+        <p>
+            A simple and professional platform to manage student information,
+            view student records, and organize academic details in one place.
+        </p>
+        <a class="btn" href="dashboard.html">Open Dashboard</a>
+        <a class="btn secondary" href="login.html">Student Login</a>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Student Records</h3>
+            <p>View and organize student information in one place.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Easy Management</h3>
+            <p>Access student details through a simple dashboard.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Online Access</h3>
+            <p>Open the portal through your browser from different devices.</p>
+        </div>
+    </section>
+
+    <footer>
+        Student Management Portal &copy; 2026
+    </footer>
+
+</body>
+</html>
+```
